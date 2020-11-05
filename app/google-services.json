@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "936484704813",
+    "firebase_url": "https://myproject-c35fb.firebaseio.com",
+    "project_id": "myproject-c35fb",
+    "storage_bucket": "myproject-c35fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936484704813:android:4f52ddfb997f2c484c1ea4",
+        "android_client_info": {
+          "package_name": "com.hsynates.savenoteandsharephoto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936484704813-arpqkjj2j5l3arjuhkoufbvhtgtaonh1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_wU9YA0YF3tap045hDWpoglSR6OE6YCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936484704813-arpqkjj2j5l3arjuhkoufbvhtgtaonh1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

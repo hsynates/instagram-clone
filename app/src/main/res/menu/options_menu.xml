@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/add_Post"
+        android:title="Add Post"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/sign_Out"
+        android:title="Log Out"
+        tools:ignore="HardcodedText" />
+</menu>

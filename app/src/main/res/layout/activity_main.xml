@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="32dp"
+    tools:context=".SignActivity">
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/textViewLogoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/galada"
+            android:text="Instagram Clone"
+            android:textColor="@android:color/white"
+            android:textSize="40dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/textViewLogoText"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/instacloneforeground"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutLoginItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonSignUP"
+        android:layout_below="@+id/RelativeLayoutHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        tools:ignore="HardcodedText">
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_text"
+            android:drawableLeft="@drawable/instacloneuser"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
+            android:textColor="#e00021"
+            android:textColorHint="#80E00021"
+            android:textSize="16dp"
+            tools:ignore="Autofill,HardcodedText" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextEmail"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/custom_text"
+            android:drawableLeft="@drawable/instaclonekey"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textColor="#e00021"
+            android:textColorHint="#80E00021"
+            android:textSize="16dp"
+            tools:ignore="Autofill,HardcodedText,TextFields" />
+
+        <Button
+            android:id="@+id/buttonSignIN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextPassword"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:onClick="signIN"
+            android:text="LOGIN"
+            android:textColor="@android:color/white"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+    <!--
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutAPI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonSignUP"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/facebook"
+            android:background="@drawable/google" />
+
+        <ImageButton
+            android:id="@+id/facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/facebook" />
+
+        <ImageButton
+            android:id="@+id/twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/facebook"
+            android:background="@drawable/twitter" />
+    </RelativeLayout>
+    -->
+
+    <Button
+        android:id="@+id/buttonSignUP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:onClick="signUP"
+        android:text="REGISTER"
+        android:textColor="#e00021"
+        tools:ignore="HardcodedText,SpUsage" />
+
+</RelativeLayout>
