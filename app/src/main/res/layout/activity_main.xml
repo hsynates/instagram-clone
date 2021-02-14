@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    android:padding="32dp"
+    android:background="@drawable/background2"
+    android:padding="24dp"
     tools:context=".SignActivity">
 
     <RelativeLayout

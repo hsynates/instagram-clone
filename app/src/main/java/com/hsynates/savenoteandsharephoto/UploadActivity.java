@@ -14,7 +14,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -48,12 +47,12 @@ public class UploadActivity extends AppCompatActivity {
     Toolbar toolbar;
     EditText editTextTitle;
     ImageView imageView;
-    Button buttonUpload;
     AlertDialog.Builder alert;
     Intent intent;
     Uri imageData;
     Bitmap selectedImage;
-    FloatingActionButton floatingActionButton;
+    FloatingActionButton floatingActionButtonAddImage;
+    FloatingActionButton floatingActionButtonUpload;
     private FirebaseStorage firebaseStorage;
     private StorageReference storageReference;
     private FirebaseAuth firebaseAuth;
@@ -72,8 +71,9 @@ public class UploadActivity extends AppCompatActivity {
 
         editTextTitle = findViewById(R.id.editTexttitle);
         imageView = findViewById(R.id.imageViewSelected);
-        buttonUpload = findViewById(R.id.buttonUpload);
-        floatingActionButton = findViewById(R.id.fabAddImage);
+
+        floatingActionButtonAddImage = findViewById(R.id.fabAddImage);
+        floatingActionButtonUpload = findViewById(R.id.fabUpload);
         alert = new AlertDialog.Builder(UploadActivity.this);
 
         firebaseStorage = FirebaseStorage.getInstance();
@@ -127,9 +127,11 @@ public class UploadActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == 2 && resultCode == RESULT_OK && data != null) {
             imageData = data.getData();
+
             imageView.setVisibility(View.VISIBLE);
-            buttonUpload.setVisibility(View.VISIBLE);
-            floatingActionButton.setVisibility(View.INVISIBLE);
+            floatingActionButtonAddImage.setVisibility(View.INVISIBLE);
+            floatingActionButtonUpload.setVisibility(View.VISIBLE);
+
             Toast.makeText(getApplicationContext(), "If you want to change the photo, please click on it.", Toast.LENGTH_SHORT).show();
             try {
                 if (Build.VERSION.SDK_INT >= 28) {
@@ -187,6 +189,7 @@ public class UploadActivity extends AppCompatActivity {
                                         public void onSuccess(DocumentReference documentReference) {
                                             intent = new Intent(UploadActivity.this, FeedActivity.class);
                                             Toast.makeText(getApplicationContext(), "Uploaded!", Toast.LENGTH_SHORT).show();
+                                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                             startActivity(intent);
                                             finish();
                                         }
