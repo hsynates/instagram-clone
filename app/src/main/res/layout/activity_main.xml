@@ -40,7 +40,7 @@
         android:id="@+id/RelativeLayoutLoginItems"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/buttonSignUP"
+        android:layout_above="@id/RelativeLayoutAPI"
         android:layout_below="@+id/RelativeLayoutHeader"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
@@ -92,12 +92,11 @@
 
     </RelativeLayout>
 
-    <!--
     <RelativeLayout
         android:id="@+id/RelativeLayoutAPI"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonSignUP"
+        android:layout_above="@id/buttonSignUP"
         android:layout_centerHorizontal="true"
         android:gravity="center">
 
@@ -123,7 +122,6 @@
             android:layout_toRightOf="@+id/facebook"
             android:background="@drawable/twitter" />
     </RelativeLayout>
-    -->
 
     <Button
         android:id="@+id/buttonSignUP"

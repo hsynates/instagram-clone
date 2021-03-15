@@ -36,7 +36,7 @@
         android:hint="Title"
         android:padding="8dp"
         android:textColor="@color/colorPrimary"
-        android:textColorHint="#80B000AD"
+        android:textColorHint="@color/colorPrimary"
         tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
 
     <ImageView
