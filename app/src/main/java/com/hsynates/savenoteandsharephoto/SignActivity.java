@@ -71,6 +71,7 @@ public class SignActivity extends AppCompatActivity {
             firebaseAuth.signInWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                 @Override
                 public void onSuccess(AuthResult authResult) {
+                    buttonSignIN.setEnabled(false);
                     intent = new Intent(SignActivity.this, FeedActivity.class);
                     Toast.makeText(getApplicationContext(), "Welcome!", Toast.LENGTH_SHORT).show();
                     startActivity(intent);
